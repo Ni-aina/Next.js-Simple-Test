@@ -1,14 +1,15 @@
 import { notFound } from 'next/navigation';
 import { Article } from '@/types/article';
-import { ArrowLeftCircle, ChevronLeft } from 'lucide-react';
+import { ArrowLeftCircle } from 'lucide-react';
 import Link from 'next/link';
 
 export default async function ArticlePage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const article = await getArticleBySlug(params.slug);
+  const { slug } = await params;
+  const article = await getArticleBySlug(slug);
 
   if (!article) {
     notFound();

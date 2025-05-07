@@ -57,7 +57,7 @@ const ContactPage = () => {
                         <label htmlFor="message">Message</label>
                         <textarea className="px-4 py-2 focus-within:outline-none border rounded-md min-w-0 lg:min-w-sm" required placeholder="Hi I'd like to ask about" />
                         <div role="submit" className="mt-5">
-                            <Button className="bg-amber-900 border border-amber-900 px-8 rounded-sm cursor-pointer hover:bg-transparent hover:text-amber-900">
+                            <Button className="bg-amber-700 border border-amber-700 px-8 h-8 rounded-sm cursor-pointer hover:bg-transparent hover:text-amber-700">
                                 Submit
                             </Button>
                         </div>
